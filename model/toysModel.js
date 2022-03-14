@@ -16,6 +16,7 @@ let toySchema = new mongoose.Schema({
 
 exports.toyModel = mongoose.model("toys", toySchema);
 
+// The Validation of Adding a Toy / Update
 exports.validateToy = (_reqBody)=>{
     let joiSchema = joi.object({
         name:Joi.string().min(2).max(50).required(),

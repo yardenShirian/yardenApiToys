@@ -17,6 +17,7 @@ let userScema = new mongoose.Schema({
 
 exports.userModel = mongoose.model("users", userScema);
 
+// Add User Validation
 exports.userValidate = (_reqBody) => {
     let joiValid = joi.object({
         name: joi.string().min(2).max(30).required(),
@@ -27,7 +28,7 @@ exports.userValidate = (_reqBody) => {
 
     return joiValid.validate(_reqBody);
 }
-
+// The validation of an existing user login
 exports.loginValidate = (_reqBody) => {
     let joiValid = joi.object({
         email: joi.string().min(5).max(30).email().required(),

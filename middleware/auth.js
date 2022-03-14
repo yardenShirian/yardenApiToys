@@ -9,12 +9,12 @@ exports.auth = (req, res, next) => {
     }
 
     try {
-        // בדיקת הטוקן
+        // Check the token
         let verToken = jwt.verify(token, secret.secretWord);
         req.dataToken = verToken;
         next();
     }
-    catch(err){
+    catch (err) {
         return res.json("token in valid or expaired");
     }
 }
