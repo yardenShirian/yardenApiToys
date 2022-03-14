@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    color: gray;
+}
+
+.container {
+    max-width: 1140פס;
+    margin: 0 auto;
+}
+
+button {
+    color: gray;
+    background: rgb(241, 217, 221);
+}
+
+.post {
+    border: 1px solid gray;
+    margin: 4px;
+    max-width: 48%;
+}
+
+.get {
+    border: 1px solid gray;
+    padding-left: 8px;
+    max-width: 48%;
+   
+}
+.put{
+    border: 1px solid gray;
+    padding-left: 8px;
+    max-width: 48%;
+}
